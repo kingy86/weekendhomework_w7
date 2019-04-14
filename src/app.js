@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const beerListView = new BeersView(listContainer);
   beerListView.bindEvents();
 
-
-const beers = new Beers;
+const beers = new Beers();
 beers.getData()
 });

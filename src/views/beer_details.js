@@ -1,16 +1,16 @@
-const BeerDetails = function () {};
+const BeerDetails = function () {
+};
 
 BeerDetails.prototype.createBeerDetails = function (beer) {
-  const beerDetails = document.createElement('div')
-  beerDetails.classList.add('beer-details')
+  const beerDetail = document.createElement('div');
+  beerDetail.classList.add('beer-detail');
 
-  const name = document.createElement('h3');
-  name.textContent = beers.name;
-  beerDetails.appendChild(name);
+  const name = document.createElement('h1');
+  name.textContent = beers['name'];
+  beerDetail.appendChild(name);
+  console.log(beers);
 
-
-  return beerDetails;
-
+  return beerDetail;
 };
 
 module.exports = BeerDetails;
