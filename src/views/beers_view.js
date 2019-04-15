@@ -13,15 +13,14 @@ BeersView.prototype.bindEvents = function () {
 
 BeersView.prototype.render = function (beers) {
   beers.forEach( (beer) => {
-    const beerItem = this.createBeerItem(beer)
-    this.container.appendChild(beerItem)
+    const beerItem = this.createBeerItem(beer);
   });
 };
 
 BeersView.prototype.createBeerItem = function (beer) {
   const beerDetailView = new BeerDetails();
-  const beerDetail = beerDetailView.createBeerDetails();
-  return beerDetail;
+  const beerDetail = beerDetailView.createBeerDetails(beer);
+  this.container.appendChild(beerDetail);
 };
 
 module.exports = BeersView;
